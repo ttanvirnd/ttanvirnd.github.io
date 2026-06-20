@@ -13,6 +13,7 @@ body {
   background: #08070d;
   color: #ffffff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -25,11 +26,12 @@ a {
   color: inherit;
 }
 
+/* Header */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8, 7, 13, 0.85);
+  background: rgba(8, 7, 13, 0.9);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -55,7 +57,7 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   font-size: 15px;
   color: #d7d4e5;
 }
@@ -64,6 +66,7 @@ a {
   color: #a855f7;
 }
 
+/* Hero */
 .hero {
   width: min(1180px, 92%);
   margin: auto;
@@ -79,7 +82,7 @@ a {
   color: #c084fc;
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -105,6 +108,7 @@ a {
 }
 
 .btn {
+  display: inline-block;
   padding: 14px 24px;
   border-radius: 999px;
   font-weight: 700;
@@ -138,6 +142,7 @@ a {
   border-radius: 24px;
 }
 
+/* Common Section */
 .section {
   width: min(1180px, 92%);
   margin: auto;
@@ -146,7 +151,7 @@ a {
 
 .section-heading {
   text-align: center;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto 46px;
 }
 
@@ -158,6 +163,13 @@ a {
   letter-spacing: -2px;
 }
 
+.section-heading p:not(.eyebrow) {
+  color: #c9c5d8;
+  font-size: 18px;
+  margin-top: 14px;
+}
+
+/* Services */
 .service-grid,
 .project-grid {
   display: grid;
@@ -181,6 +193,7 @@ a {
   color: #bdb8ce;
 }
 
+/* Projects */
 .project-card {
   overflow: hidden;
   border-radius: 26px;
@@ -223,6 +236,141 @@ a {
   font-weight: 800;
 }
 
+/* Clients */
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.client-logo {
+  min-height: 90px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d7d4e5;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+
+.client-logo img {
+  max-width: 120px;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+/* Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 70px rgba(0,0,0,0.25);
+}
+
+.pricing-card.featured {
+  border-color: rgba(168,85,247,0.8);
+  box-shadow: 0 25px 90px rgba(124,58,237,0.25);
+}
+
+.badge {
+  width: fit-content;
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.pricing-card h3 {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 18px 0 10px;
+}
+
+.price span {
+  font-size: 15px;
+  color: #aaa4be;
+  font-weight: 500;
+}
+
+.pricing-text {
+  color: #c9c5d8;
+  margin-bottom: 22px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.pricing-card li {
+  color: #d7d4e5;
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #c084fc;
+  font-weight: 800;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.single-price {
+  margin-top: 32px;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.single-price h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.single-price p {
+  color: #c9c5d8;
+  font-size: 18px;
+}
+
+/* About */
 .about {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -236,6 +384,7 @@ a {
   font-size: 18px;
 }
 
+/* Contact */
 .contact {
   text-align: center;
 }
@@ -256,6 +405,7 @@ a {
   color: #fff;
 }
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 26px;
@@ -263,6 +413,7 @@ a {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
+/* Tablet */
 @media (max-width: 950px) {
   .hero,
   .about {
@@ -274,31 +425,46 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .hero-visual img {
     height: 430px;
   }
 }
 
+/* Mobile */
 @media (max-width: 620px) {
   .nav-links {
     display: none;
   }
 
+  .navbar {
+    height: 72px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
   .hero {
-    padding: 44px 0;
+    min-height: auto;
+    padding: 52px 0;
+    gap: 34px;
   }
 
   .hero h1 {
+    font-size: 44px;
     letter-spacing: -2px;
   }
 
-  .service-grid,
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card img {
-    height: 260px;
+  .hero-text {
+    font-size: 16px;
   }
 
   .hero-visual img {
@@ -306,117 +472,49 @@ a {
   }
 
   .section {
-    padding: 68px 0;
-  }
-  
-}
-
-.client-logo-grid,
-.pricing-grid {
-  display: grid;
-  gap: 24px;
-  width: 100%;
-}
-
-.client-logo-grid {
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 40px;
-}
-
-.client-logo {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 18px;
-  padding: 28px 16px;
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-}
-
-.pricing-grid {
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 45px;
-}
-
-.pricing-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 24px;
-  padding: 32px;
-  color: #fff;
-}
-
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 24px 0;
-}
-
-.pricing-card li {
-  margin-bottom: 12px;
-  color: #d1d5db;
-  font-size: 16px;
-}
-
-.pricing-card li::before {
-  content: "✓ ";
-  color: #a855f7;
-  font-weight: 700;
-}
-
-.price {
-  font-size: 34px;
-  font-weight: 800;
-  margin: 16px 0 10px;
-}
-
-.price span {
-  font-size: 15px;
-  color: #aaa;
-}
-
-.featured {
-  border-color: #a855f7;
-}
-
-.badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #7c3aed, #c084fc);
-  padding: 8px 14px;
-  border-radius: 50px;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.single-price {
-  margin-top: 30px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 22px;
-  padding: 26px;
-  text-align: center;
-  color: #fff;
-}
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-  .clients-section,
-  .pricing-section {
-    padding-left: 24px;
-    padding-right: 24px;
+    width: min(100% - 40px, 1180px);
+    padding: 72px 0;
   }
 
-  .client-logo-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .section-heading {
+    margin-bottom: 34px;
   }
 
+  .section-heading h2,
+  .about h2,
+  .contact h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .section-heading p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .service-grid,
+  .project-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
 
+  .project-card img {
+    height: 260px;
+  }
+
+  .client-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .client-logo {
+    min-height: 78px;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+
   .pricing-card {
-    padding: 26px 22px;
+    padding: 28px 24px;
+    border-radius: 24px;
   }
 
   .pricing-card h3 {
@@ -424,14 +522,27 @@ a {
   }
 
   .price {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .pricing-card li {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  .pricing-card .btn {
+    width: 100%;
   }
 
   .single-price {
     text-align: left;
+    padding: 24px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+  }
+
+  .contact-box a {
+    width: 100%;
   }
 }
