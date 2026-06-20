@@ -308,4 +308,130 @@ a {
   .section {
     padding: 68px 0;
   }
+  
+}
+
+.client-logo-grid,
+.pricing-grid {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+}
+
+.client-logo-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+.client-logo {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 28px 16px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 45px;
+}
+
+.pricing-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 32px;
+  color: #fff;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.pricing-card li {
+  margin-bottom: 12px;
+  color: #d1d5db;
+  font-size: 16px;
+}
+
+.pricing-card li::before {
+  content: "✓ ";
+  color: #a855f7;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 34px;
+  font-weight: 800;
+  margin: 16px 0 10px;
+}
+
+.price span {
+  font-size: 15px;
+  color: #aaa;
+}
+
+.featured {
+  border-color: #a855f7;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.single-price {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .clients-section,
+  .pricing-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .client-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 26px 22px;
+  }
+
+  .pricing-card h3 {
+    font-size: 28px;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+
+  .pricing-card li {
+    font-size: 17px;
+  }
+
+  .single-price {
+    text-align: left;
+  }
 }
